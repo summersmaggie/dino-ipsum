@@ -18,7 +18,7 @@ export class Dino {
   getGiphyAPI() {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      let url = `http://api.giphy.com/v1/gifs/random?q=dinosaur&api_key=${process.env.GIPHY_KEY}&limit=5`;
+      let url = `http://api.giphy.com/v1/gifs/search?q=dinosaur&api_key=${process.env.GIPHY_KEY}&limit=5`;
       console.log('url '+url);
       request.onload = function() {
         if (this.status === 200) {

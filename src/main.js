@@ -18,8 +18,8 @@ $(document).ready(function() {
 
     promiseSecond.then(function(response) {
       let parsedBody = JSON.parse(response);
-      // let random = Math.floor(Math.random()* 4);
-      let reply = parsedBody.data.images.original.url;
+      let random = Math.floor(Math.random()* 4);
+      let reply = parsedBody.data[random].images.original.url;
       $('.show-dino-giphy').html(`<img src=${reply}>`);
       });
     });
